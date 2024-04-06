@@ -1,37 +1,38 @@
-let name;
+let name = ("Alex").toLowerCase();
 
 while (true) {
-    name = prompt("Как вас зовут?").toLowerCase().trim();
-    if (name && name[0] === "a") {
+    name = prompt("Как вас зовут?").toLowerCase();
+    if (name === "alex") {
         break;
     } else {
         alert("Ошибка: Иди гуляй Вася");
     }
 }
-console.log("Привет, " + name + "! Давайте продолжим.");
+console.log("Привет, " + name);
 
 
-let accountNumber;
+let accountNumber = 7777;
 
 while (true) {
     accountNumber = parseFloat(prompt("Введите номер счета:"));
-    if (!isNaN(accountNumber) && accountNumber === 10000) {
+    if (accountNumber === 7777) {
         break;
     } else {
         alert("Ошибка: Неправильный номер счета");
     }
 }
-alert("Отлично! Номер счета: " + accountNumber);
+console.log("Номер счета, " + accountNumber);
 
+let money = 10000;
 
 while (true) {
     var суммаСнятия = parseFloat(prompt("Введите сумму для снятия:"));
-    if (!isNaN(суммаСнятия) && суммаСнятия <= accountNumber) {
-        accountNumber -= суммаСнятия;
+    if (!isNaN(суммаСнятия) && суммаСнятия <= money) {
+        money -= суммаСнятия;
         console.log("Снято: " + суммаСнятия);
-        console.log("Осталось: " + accountNumber);
+        console.log("Осталось: " + money);
         break;
     } else {      
-        console.log("Ошибка: Введите корректную сумму для снятия");
+        console.log("Ошибка: Пашел в ж...!");
     }
 }
